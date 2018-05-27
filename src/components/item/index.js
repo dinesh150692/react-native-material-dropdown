@@ -33,13 +33,13 @@ export default class DropdownItem extends PureComponent {
   }
 
   render() {
-    let { children, style, index, ...props } = this.props;
-
+    let { children, style, index, selected, ...props } = this.props;
+    let backgroundColor = ~selected ? index === selected? 'black' : 'white' : 'white';
     return (
       <Button
         {...props}
 
-        style={[styles.container, style]}
+        style={[{backgroundColor: backgroundColor}, styles.container, style]}
         onPress={this.onPress}
       >
         {children}

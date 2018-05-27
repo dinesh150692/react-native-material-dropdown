@@ -615,7 +615,7 @@ export default class Dropdown extends PureComponent {
         index === selected?
           selectedItemColor:
           itemColor:
-        selectedItemColor;
+        itemColor;
 
     let textStyle = { color, fontSize };
 
@@ -629,7 +629,7 @@ export default class Dropdown extends PureComponent {
     ];
 
     return (
-      <DropdownItem index={index} {...props}>
+      <DropdownItem index={index}   selected={selected} {...props}>
         <Text style={[styles.item, itemTextStyle, textStyle]} numberOfLines={1}>
           {title}
         </Text>
